@@ -108,11 +108,9 @@
 <script setup lang="ts">
 import ElButton from './components/button/Button.vue'
 import ElDialog from './components/dialog/Dialog.vue'
-
 import {ref,reactive} from 'vue'
-const comp = ref('form')
 import {FormType} from './components/form/type'
-
+const comp = ref('form')
 const compExamples = ref(['container','button','form','dialog','notification'])
 
 const showDialog = ref<boolean>(false)
