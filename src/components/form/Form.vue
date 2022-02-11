@@ -39,7 +39,8 @@ function validate(cb: (isValid: boolean) => void) {
     .then(() => { cb(true) })
     .catch(() => { cb(false) })
 }
-
+// 使用 <script setup>的组件默认关闭的,也即通过模板ref或者$parent链获取到组件的公开实例,不会暴露任何在 <script setup>中声明的绑定
+//  为了在 <script setup>组件中明确要暴露出去的属性,使用defineExpose编译器宏
 defineExpose({
   validate,
 })
